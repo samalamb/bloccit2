@@ -1,0 +1,7 @@
+Thanks for creating "<%= @post.title %>"
+ <%= "=" * (@post.title.length + 12) %>
+
+
+ <%= @post.body %>
+
+ View your post online at: <%= topic_post_url(@post.topic, @post) %>

@@ -18,6 +18,7 @@ require 'rails_helper'
    it { is_expected.to have_many(:labelings) }
    it { is_expected.to have_many(:labels).through(:labelings) }
    it { is_expected.to have_many(:votes) }
+   it { is_expected.to have_many(:favorites) }
 
    it { is_expected.to validate_presence_of(:title) }
    it { is_expected.to validate_presence_of(:body) }

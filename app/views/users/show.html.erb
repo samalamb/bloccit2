@@ -21,7 +21,10 @@
 </div>
 
 <h2>Posts</h2>
-<%= render @user.posts %>
+<%= user_has_any_posts?(@user) %>
 
 <h2>Comments</h2>
-<%= render @user.comments %>
+<%= user_has_any_comments?(@user) %>
+
+<h2>Favorites</h2>
+<%= render partial: 'favorites/favoritelist', locals: {buser: @user} %>

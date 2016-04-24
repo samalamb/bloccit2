@@ -4,5 +4,9 @@ class Topic < ActiveRecord::Base
 # #13
   has_many :labels, through: :labelings
 
-  scope :visible_to, -> (user) { user ? all : where(public: true) }
+  scope :visible_to, -> (user) {publicly_viewable(user)}
+
+  scope :publicly_viewable, -> (user) { user ? all : where(public: true) }
+
+  scope :privately_viewable, -> (user) { user ? all: where(public: false) }
 end

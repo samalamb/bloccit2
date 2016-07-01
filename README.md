@@ -1,3 +1,5 @@
 ## Bloccit: a Reddit replica to teach the fundamentals of web development and Rails.
 
 Made with my mentor at [Bloc](http://bloc.io).
+
+Bloccit took all the fundamentals that I learned with Address Bloc and all the subsequent lessons before so. Bloccit runs with Ruby on Rails. Bloccit makes use of Rails' database building by giving users a way to create posts on the website; Rails will store the information that the user entered into the database, but it does make sure that certain criteria are met before the post is saved and raises errors that the user will fix before being able to proceed with posting. Users also have the ability to comment on posts, favorite posts and sign in using their own email address and password. Bloccit uses a couple different services, primarily it uses GitHub for the repository, and Heroku when it is ready to be deployed. Testing for Bloccit is done with RSpec making sure that the database is updated with correct information. Finally it uses the ActiveMailer in Rails so that when a user favorites a post they will continually recieve updates on the post in their email that they signed up with.
